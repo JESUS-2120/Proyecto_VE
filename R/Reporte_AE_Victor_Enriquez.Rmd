@@ -134,7 +134,7 @@ table(rse_gene_SRP051765$assigned_gene_prop > 0.4)
 table(rse_gene_SRP051765$assigned_gene_prop > 0.45)
 ```
 
-**imagen_1**
+![](../imagenes/imagen_1.jpg)
 
 Continuamos con la normalización de nuestros datos
 
@@ -172,7 +172,7 @@ plotVarPart(var_exp)
 
 En este caso observamos que la linea celular es una parte importante de la variación en la expresión de los genes, sin embargo se decidió no incluir esta variable en el modelo pues sabemos que distintas líneas celulares expresan genes de maneras distintas por lo que dicha variación se debe más a las diferencias entre las células y no a las diferencias en el tratamiento.
 
-**Insertar imagen_2**
+![](../imagenes/imagen_2.jpg)
 
 ```{R}
 modelo <- model.matrix(~ sra_attribute.origin + sra_attribute.drug_treatment,
@@ -197,7 +197,7 @@ de_results <- topTable(
 )
 ```
 
-**Insertar imagen_3**
+![](../imagenes/imagen_3.jpg)
 
 Ahora vemos cuantos genes estan realmente diferencialmente expresados
 
@@ -239,7 +239,7 @@ pheatmap(
 )
 ```
 
-**Insertar imagen_4**
+![](../imagenes/imagen_4.jpg)
 
 Hacemos multidimensional scaning
 
@@ -255,7 +255,7 @@ col.Treatment <- as.character(col.Treatment)
 plotMDS(vGene$E, labels = df$Treatment, col = col.Treatment)
 ```
 
-**Insertar imagen_5**
+![](../imagenes/imagen_5.jpg)
 
 Ahora hacemos una gráfica para el gen mas diferencialmente expresado
 
@@ -275,7 +275,7 @@ ggplot(df_temp, aes(y = Expression, x = Origen, fill = Tratamiento)) +
 
 ```
 
-**Insertar imagen_6**
+![](../imagenes/imagen_6.jpg)
 
 ## Conclusiones 
 
